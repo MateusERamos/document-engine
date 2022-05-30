@@ -8,8 +8,10 @@ class DocumentProcessor {
     return "htmlString";
   }
 
-  variableFormatter(value, variable_type, display_style) {
-    return [`${variable_type}Formatter`][display_style](value);
+  variableFormatter(variable) {
+    return [`${variable.type}Formatter`][
+      `${variable.display_style || "plain"}`
+    ](variable);
   }
 }
 
