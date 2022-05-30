@@ -1,4 +1,5 @@
-const DocumentProcessor = require("./src/Engine/DocumentProcessor");
+//import documentProcessor from "./DocumentProcessor";
+const documentProcessor = require("./DocumentProcessor");
 
 var template = {
   deleted: false,
@@ -90,4 +91,4 @@ var variables = {
 var visible = [[true, true]];
 var title = "doc title";
 
-new DocumentProcessor().execute(templateText, variables);
+documentProcessor.execute(templateText, variables);

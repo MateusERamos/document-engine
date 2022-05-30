@@ -1,10 +1,14 @@
 {
   "name": "document-engine",
-  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "source": "src/index.js",
+  "main": "dist/document-engine.min.js",
+  "module": "dist/document-engine-module.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/parcel build",
+    "start": "./node_modules/.bin/parcel watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MateusERamos/document-engine/issues"
   },
-  "homepage": "https://github.com/MateusERamos/document-engine#readme"
+  "homepage": "https://github.com/MateusERamos/document-engine#readme",
+  "devDependencies": {
+    "parcel": "^2.6.0"
+  }
 }

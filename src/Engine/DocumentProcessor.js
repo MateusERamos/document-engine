@@ -1,6 +1,4 @@
-const stringFormatter = require("../formatters/StringFormatter");
-const numberFormatter = require("../formatters/StringFormatter");
-const percentageFormatter = require("../formatters/StringFormatter");
+import base from "../formatters/BaseFormatter";
 
 class DocumentProcessor {
   execute(template, variables) {
@@ -9,10 +7,9 @@ class DocumentProcessor {
   }
 
   variableFormatter(variable) {
-    return [`${variable.type}Formatter`][
-      `${variable.display_style || "plain"}`
-    ](variable);
+    const style = variable.display_style || "plain";
+    return base.formatters[`${variable.type}Formatter`][style](variable);
   }
 }
 
-module.exports = DocumentProcessor;
+module.exports = new DocumentProcessor();
