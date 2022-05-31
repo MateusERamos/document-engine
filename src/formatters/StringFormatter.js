@@ -1,4 +1,4 @@
-const BaseFormatter = require("./BaseFormatter");
+import BaseFormatter from "./BaseFormatter";
 
 class StringFormatter extends BaseFormatter {
   static sentence_case({ value }) {

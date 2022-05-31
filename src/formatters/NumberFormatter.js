@@ -1,5 +1,5 @@
-const BaseFormatter = require("./BaseFormatter");
-const Utils = require("../Utils");
+import BaseFormatter from "./BaseFormatter";
+import Utils from "../Utils";
 
 class NumberFormatter extends BaseFormatter {
   static extended({ value }) {

@@ -1,5 +1,5 @@
-const BaseFormatter = require("./BaseFormatter");
-const Utils = require("../Utils");
+import BaseFormatter from "./BaseFormatter";
+import Utils from "../Utils";
 
 class TimeFormatter extends BaseFormatter {
   static extended({ value }) {

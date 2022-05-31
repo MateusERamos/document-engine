@@ -1,4 +1,4 @@
-const BaseFormatter = require("./BaseFormatter");
+import BaseFormatter from "./BaseFormatter";
 
 class ListFormatter extends BaseFormatter {
   static commas({ value }) {

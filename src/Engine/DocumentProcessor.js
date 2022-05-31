@@ -1,4 +1,4 @@
-import base from "../formatters/BaseFormatter";
+import { formatters } from "../formatters/Formatter";
 
 class DocumentProcessor {
   execute(template, variables) {
@@ -8,7 +8,11 @@ class DocumentProcessor {
 
   variableFormatter(variable) {
     const style = variable.display_style || "plain";
-    return base.formatters[`${variable.type}Formatter`][style](variable);
+    const type =
+      variable.type.substr(0, 2) === "structured_"
+        ? "structured"
+        : variable.type;
+    return formatters[type][style](variable);
   }
 }
 
