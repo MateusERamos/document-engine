@@ -1,5 +1,4 @@
 import BaseFormatter from "./BaseFormatter";
-
 import slugify from "slugify";
 class DataBaseFormatter extends BaseFormatter {
   static plain({ value, database_endpoint, specs }) {

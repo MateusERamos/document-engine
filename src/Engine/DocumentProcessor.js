@@ -7,12 +7,20 @@ class DocumentProcessor {
   }
 
   variableFormatter(variable) {
-    const style = variable.display_style || "plain";
+    const style =
+      variable.display_style && !variable.display_style.includes("%")
+        ? variable.display_style
+        : "plain";
     const type =
-      variable.type.substr(0, 2) === "structured_"
+      variable.type.substr(0, 11) === "structured_"
         ? "structured"
         : variable.type;
-    return formatters[type][style](variable);
+    try {
+      return formatters[type][style](variable);
+    } catch {
+      console.log("");
+      return variable.value;
+    }
   }
 }
 
