@@ -1,5 +1,4 @@
-//import documentProcessor from "./DocumentProcessor";
-const documentProcessor = require("./DocumentProcessor");
+import documentProcessor from "./DocumentProcessor";
 
 var template = {
   deleted: false,
@@ -91,4 +90,125 @@ var variables = {
 var visible = [[true, true]];
 var title = "doc title";
 
-documentProcessor.execute(templateText, variables);
+// documentProcessor.execute(templateText, variables);
+
+const variablesTest = [
+  {
+    info: "",
+    initialValue: "",
+    label: "",
+    optional: false,
+    placeholder: "",
+    type: "text",
+    variable: {
+      doc_display_style: "plain",
+      name: "a",
+      type: "string",
+    },
+  },
+  {
+    info: "",
+    initialValue: "",
+    label: "",
+    optional: false,
+    placeholder: "",
+    type: "text_area",
+    variable: {
+      doc_display_style: "plain",
+      name: "b",
+      type: "string",
+    },
+  },
+  {
+    decimals: "",
+    info: "",
+    initialValue: "",
+    label: "",
+    max: "",
+    min: "",
+    optional: false,
+    step: "",
+    type: "number",
+    variable: {
+      doc_display_style: "plain",
+      name: "c",
+      type: "number",
+    },
+  },
+  {
+    info: "",
+    initialValue: "",
+    label: "",
+    optional: false,
+    type: "cpf",
+    variable: {
+      doc_display_style: "plain",
+      name: "d",
+      type: "string",
+    },
+  },
+  {
+    info: "",
+    initialValue: "",
+    label: "",
+    optional: false,
+    type: "cnpj",
+    variable: {
+      doc_display_style: "plain",
+      name: "e",
+      type: "string",
+    },
+  },
+  {
+    info: "",
+    initialValue: "",
+    label: "",
+    optional: false,
+    type: "email",
+    variable: {
+      doc_display_style: "plain",
+      name: "f",
+      type: "string",
+    },
+  },
+  {
+    info: "",
+    initialValue: "",
+    label: "",
+    optional: false,
+    type: "date",
+    variable: {
+      doc_display_style: "%d/%m/%Y",
+      name: "g",
+      type: "date",
+    },
+  },
+  {
+    info: "",
+    initialValue: "",
+    label: "",
+    minute_step: "",
+    optional: false,
+    type: "time",
+    variable: {
+      name: "h",
+      type: "time",
+    },
+  },
+  {
+    info: "",
+    initialValue: 0,
+    label: "",
+    optional: false,
+    type: "currency",
+    variable: {
+      doc_display_style: "plain",
+      name: "i",
+      type: "currency",
+    },
+  },
+];
+
+console.log("teste");
+
+documentProcessor.variableFormatter(variablesTest);

@@ -7,6 +7,7 @@ class DocumentProcessor {
   }
 
   variableFormatter(variable) {
+    console.log(variable);
     const style =
       variable.display_style && !variable.display_style.includes("%")
         ? variable.display_style

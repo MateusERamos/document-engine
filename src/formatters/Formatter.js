@@ -4,6 +4,8 @@ import PercentageFormatter from "./PercentageFormatter";
 import ListFormatter from "./ListFormatter";
 import DateFormatter from "./DateFormatter";
 import TimeFormatter from "./TimeFormatter";
+import CurrencyFormatter from "./CurrencyFormatter";
+import DataBaseFormatter from "./DataBaseFormatter";
 
 class Formatter {
   static get formatters() {
@@ -14,6 +16,8 @@ class Formatter {
       list: ListFormatter,
       date: DateFormatter,
       time: TimeFormatter,
+      currency: CurrencyFormatter,
+      database: DataBaseFormatter,
     };
   }
 }

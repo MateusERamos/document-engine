@@ -24,6 +24,7 @@
     "parcel": "^2.6.0"
   },
   "dependencies": {
+    "nunjucks": "^3.2.3",
     "slugify": "^1.6.5"
   }
 }
