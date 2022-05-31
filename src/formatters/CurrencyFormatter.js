@@ -2,22 +2,24 @@ import BaseFormatter from "./BaseFormatter";
 import Utils from "../Utils";
 
 class CurrencyFormatter extends BaseFormatter {
-  static extended({ value }) {
+  static extended({ variables, variable }) {
+    const value = variables[variable];
     return `${value.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
-    })} (${Utils.number2words(value)})`;
+    })} ${Utils.number2words(value)}`;
   }
 
-  static date_extended({ value }) {
+  static date_extended({ variables, variable }) {
+    const value = variables[variable];
     return `${value.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
-    })} (${Utils.number2words(value)})`;
+    })} ${Utils.number2words(value)}`;
   }
 
-  static plain({ value }) {
-    return value.toLocaleString("pt-BR", {
+  static plain({ variables, variable }) {
+    return variables[variable].toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });

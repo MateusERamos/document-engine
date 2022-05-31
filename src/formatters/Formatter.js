@@ -6,6 +6,7 @@ import DateFormatter from "./DateFormatter";
 import TimeFormatter from "./TimeFormatter";
 import CurrencyFormatter from "./CurrencyFormatter";
 import DataBaseFormatter from "./DataBaseFormatter";
+import StructuredFormatter from "./StructuredFormatter";
 
 class Formatter {
   static get formatters() {
@@ -18,6 +19,7 @@ class Formatter {
       time: TimeFormatter,
       currency: CurrencyFormatter,
       database: DataBaseFormatter,
+      structured: StructuredFormatter,
     };
   }
 }

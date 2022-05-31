@@ -16,8 +16,8 @@ class DateFormatter extends BaseFormatter {
     "Dezembro",
   ];
 
-  static plain({ value, doc_display_style }) {
-    const date = new Date(value);
+  static plain({ variables, variable, doc_display_style }) {
+    const date = new Date(variables[variable]);
     return doc_display_style.includes("%")
       ? doc_display_style
           .replace("%d", date.getDate())
@@ -26,15 +26,15 @@ class DateFormatter extends BaseFormatter {
       : value;
   }
 
-  static extended({ value }) {
-    const date = new Date(value);
+  static extended({ variables, variable }) {
+    const date = new Date(variables[variable]);
     return `${date.getDate()} de ${
-      DateFormatter.#month[data.getMonth()]
+      DateFormatter.#month[date.getMonth()]
     } de ${date.getFullYear()}`;
   }
 
-  static date_extended({ value }) {
-    const date = new Date(value);
+  static date_extended({ variables, variable }) {
+    const date = new Date(variables[variable]);
     return `${date.getDate()} de ${
       DateFormatter.#month[date.getMonth()]
     } de ${date.getFullYear()}`;

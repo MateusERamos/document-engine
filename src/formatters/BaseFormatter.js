@@ -1,6 +1,6 @@
 class BaseFormatter {
-  static plain({ value }) {
-    return value;
+  static plain({ variables, variable }) {
+    return variables[variable];
   }
 }
 

@@ -2,10 +2,10 @@ import BaseFormatter from "./BaseFormatter";
 import Utils from "../Utils";
 
 class TimeFormatter extends BaseFormatter {
-  static extended({ value }) {
+  static extended({ variables, variable }) {
     const [stringHora, stringMinutos] = [
-      Utils.number2words(parseInt(value.substr(0, 2))),
-      Utils.number2words(parseInt(value.substr(3, 5))),
+      Utils.number2words(parseInt(variables[variable].substr(0, 2))),
+      Utils.number2words(parseInt(variables[variable].substr(3, 5))),
     ];
     const hora =
       stringHora === "um" ? stringHora + "a hora" : stringHora + " horas";
