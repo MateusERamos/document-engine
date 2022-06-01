@@ -1,15 +1,10 @@
 import BaseFormatter from "./BaseFormatter";
-import nunjucks from "nunjucks";
+import Utils from "../Utils";
 
 class StructuredFormatter extends BaseFormatter {
-  static #env = new nunjucks.Environment(
-    (loader = nunjucks.PackageLoader("app", "templates")),
-    (autoescape = nunjucks.select_autoescape(["html", "xml"]))
-  );
-
   static text({ variables, specs }) {
     const rows_list = [];
-    jinja_template = StructuredFormatter.#env.from_string(
+    jinja_template = Utils.envNunjucks.from_string(
       specs.extra_style_params.row_template
     );
     for (const index in variables) {
@@ -49,10 +44,10 @@ class StructuredFormatter extends BaseFormatter {
     const return_variables = [];
     if (specs.extra_style_params.row_template != "") {
       const row_template = specs.extra_style_params.row_template;
-      jinja_template = StructuredFormatter.#env.from_string(row_template);
+      nunjucks_template = Utils.envNunjucks.from_string(row_template);
       for (const index in variables) {
         variables[index]["INDEX"] = index + 1;
-        filled_text = jinja_template.render(variables[index]);
+        filled_text = nunjucks_template.render(variables[index]);
         return_variables.append(filled_text);
       }
     } else {

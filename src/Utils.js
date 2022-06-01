@@ -1,4 +1,11 @@
+import nunjucks from "nunjucks";
+
 class Utils {
+  static #env = new nunjucks.Environment(
+    (loader = nunjucks.PackageLoader("app", "templates")),
+    (autoescape = nunjucks.select_autoescape(["html", "xml"]))
+  );
+
   static number2words(n) {
     const num =
       "zero um dois três quatro cinco seis sete oito nove dez onze doze treze quatorze quinze dezesseis dezessete dezoito dezenove".split(
@@ -21,6 +28,10 @@ class Utils {
       " thousand" +
       (n % 1000 != 0 ? " " + number2words(n % 1000) : "")
     );
+  }
+
+  static get envNunjucks() {
+    return Utils.#env;
   }
 }
 
