@@ -1,4 +1,4 @@
-import documentProcessor from "./DocumentProcessor";
+const documentProcessor = require("../../dist/document-engine.min");
 
 var template = {
   deleted: false,

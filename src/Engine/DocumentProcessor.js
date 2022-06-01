@@ -1,23 +1,22 @@
 import VariableProcessor from "./VariableProcessor";
-import Utils from "../Utils";
+import nunjucks from "nunjucks";
 
 class DocumentProcessor {
-  execute(document_template, variables) {
-    let processedVariables = VariableProcessor.formatter(variables);
-    processedVariables = { ...processedVariables, ...date };
-
-    document = applyVariables(document_template, variables);
-
+  execute(documentTemplate, variables) {
+    const processedVariables = VariableProcessor.formatter(variables);
+    //processedVariables = { ...processedVariables, ...date };
+    const document = applyVariables(documentTemplate, processedVariables);
     return encodeURI(document);
   }
 
-  applyVariables(document_template, variables) {
-    nunjucks_template = Utils.envNunjucks.from_string(
-      decodeURI(document_template)
+  applyVariables(documentTemplate, variables) {
+    // const template = nunjucks.compile(decodeURI(documentTemplate));
+    // const result = template.render(variables);
+    const result = nunjucks.renderString(
+      decodeURI(documentTemplate),
+      variables
     );
-    filled_text = nunjucks_template.render(variables);
-
-    return filled_text;
+    return result;
   }
 }
 
