@@ -5,20 +5,15 @@ class DocumentProcessor {
   constructor() {}
 
   execute(documentTemplate, variables) {
-    const processedVariables = VariableProcessor.formatter(variables);
+    const formattedVariables = VariableProcessor.formatter(variables);
     //processedVariables = { ...processedVariables, ...date };
-    const document = applyVariables(documentTemplate, processedVariables);
-    return encodeURI(document);
-  }
 
-  applyVariables(documentTemplate, variables) {
-    // const template = nunjucks.compile(decodeURI(documentTemplate));
-    // const result = template.render(variables);
-    const result = nunjucks.renderString(
+    const documentTxt = nunjucks.renderString(
       decodeURI(documentTemplate),
-      variables,
+      formattedVariables,
     );
-    return result;
+
+    return encodeURI(documentTxt);
   }
 }
 

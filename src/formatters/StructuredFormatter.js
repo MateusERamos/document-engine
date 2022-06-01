@@ -61,4 +61,4 @@ class StructuredFormatter extends BaseFormatter {
   }
 }
 
-module.exports = StructuredFormatter;
+export default StructuredFormatter;
