@@ -1,20 +1,16 @@
-import BaseFormatter from "./BaseFormatter";
-import Utils from "../Utils";
+import BaseFormatter from './BaseFormatter';
+import Utils from '../Utils';
 
 class NumberFormatter extends BaseFormatter {
-  static extended({ variables, variable }) {
-    return `${variables[variable]} (${Utils.number2words(
-      variables[variable]
-    )})`;
+  static extended({ variable }) {
+    return `${variable} (${Utils.number2words(variable)})`;
   }
 
-  static percent({ variables, variable }) {
-    return `${variables[variable]}% (${Utils.number2words(
-      variables[variable]
-    )} por cento)`;
+  static percent({ variable }) {
+    return `${variable}% (${Utils.number2words(variable)} por cento)`;
   }
 
-  static ordinal({ variables, variable }) {
+  static ordinal({ variable }) {
     //TO DO
     return false;
   }

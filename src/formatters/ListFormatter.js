@@ -1,18 +1,19 @@
-import BaseFormatter from "./BaseFormatter";
+import BaseFormatter from './BaseFormatter';
 
 class ListFormatter extends BaseFormatter {
-  static commas({ variables, variable }) {
-    const value = variables[variable];
-    if (value.length < 2) return value[0];
-    last_element = value.pop();
-    value[value.length - 1] = value[value.length - 1] + " e " + last_element;
-    return value.join(", ");
+  static commas({ variable }) {
+    if (variable.length < 2) return variable[0];
+    const last_element = variable.pop();
+    variable[variable.length - 1] =
+      variable[variable.length - 1] + ' e ' + last_element;
+    return variable.join(', ');
   }
 
-  static bullets({ variables, variable, text_type }) {
-    if (text_type == ".txt") return variables[variable].join("</li><p>");
+  static bullets({ variable, text_type = '.txt' }) {
+    if (text_type == '.txt')
+      return '<ol><li>' + variable.join('</li><li>') + '</li></ol>';
 
-    if (text_type == ".docx") return variables[variable].join("\a");
+    if (text_type == '.docx') return variable.join('a');
   }
 }
 

@@ -1,19 +1,19 @@
-import BaseFormatter from "./BaseFormatter";
-import Utils from "../Utils";
+import BaseFormatter from './BaseFormatter';
+import Utils from '../Utils';
 
 class TimeFormatter extends BaseFormatter {
-  static extended({ variables, variable }) {
+  static extended({ variable }) {
     const [stringHora, stringMinutos] = [
-      Utils.number2words(parseInt(variables[variable].substr(0, 2))),
-      Utils.number2words(parseInt(variables[variable].substr(3, 5))),
+      Utils.number2words(parseInt(variable.substr(0, 2))),
+      Utils.number2words(parseInt(variable.substr(3, 5))),
     ];
     const hora =
-      stringHora === "um" ? stringHora + "a hora" : stringHora + " horas";
+      stringHora === 'um' ? stringHora + 'a hora' : stringHora + ' horas';
     const minuto =
-      stringMinutos === "zero"
-        ? ""
+      stringMinutos === 'zero'
+        ? ''
         : ` e ${stringMinutos} 
-        ${stringMinutos === "um" ? "minuto" : "minutos"}`;
+        ${stringMinutos === 'um' ? 'minuto' : 'minutos'}`;
     return `${hora}${minuto}`;
   }
 }

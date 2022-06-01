@@ -1,19 +1,16 @@
-import BaseFormatter from "./BaseFormatter";
+import BaseFormatter from './BaseFormatter';
 
 class StringFormatter extends BaseFormatter {
-  static sentence_case({ variables, variable }) {
-    return (
-      variables[variable].charAt(0).toUpperCase() +
-      variables[variable].toLowerCase().slice(1)
-    );
+  static sentence_case({ variable }) {
+    return variable.charAt(0).toUpperCase() + variable.toLowerCase().slice(1);
   }
 
   static uppercase({ variables, variable }) {
-    return variables[variable].toUpperCase();
+    return variable.toUpperCase();
   }
 
-  static lowercase({ variables, variable }) {
-    return variables[variable].toLowerCase();
+  static lowercase({ variable }) {
+    return variable.toLowerCase();
   }
 }
 

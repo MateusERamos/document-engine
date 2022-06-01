@@ -1,12 +1,12 @@
-import BaseFormatter from "./BaseFormatter";
+import BaseFormatter from './BaseFormatter';
 
 class PercentageFormatter extends BaseFormatter {
-  static plain({ variables, variable }) {
-    return variables[variable].replace(".", ",") + "%";
+  static plain({ variable }) {
+    return variable.replace('.', ',') + '%';
   }
 
-  static extended({ value }) {
-    return Utils.number2words(variables[variable]) + " porcento";
+  static extended({ variable }) {
+    return Utils.number2words(variable) + ' porcento';
   }
 }
 
