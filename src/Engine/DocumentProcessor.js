@@ -1,7 +1,9 @@
-import VariableProcessor from "./VariableProcessor";
-import nunjucks from "nunjucks";
+import VariableProcessor from './VariableProcessor';
+import nunjucks from 'nunjucks';
 
 class DocumentProcessor {
+  constructor() {}
+
   execute(documentTemplate, variables) {
     const processedVariables = VariableProcessor.formatter(variables);
     //processedVariables = { ...processedVariables, ...date };
@@ -14,10 +16,10 @@ class DocumentProcessor {
     // const result = template.render(variables);
     const result = nunjucks.renderString(
       decodeURI(documentTemplate),
-      variables
+      variables,
     );
     return result;
   }
 }
 
-module.exports = new DocumentProcessor();
+export default new DocumentProcessor();

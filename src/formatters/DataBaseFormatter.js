@@ -21,5 +21,4 @@ class DataBaseFormatter extends BaseFormatter {
     return new_variables;
   }
 }
-
-module.exports = DataBaseFormatter;
+export default DataBaseFormatter;

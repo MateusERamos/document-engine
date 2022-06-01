@@ -4,4 +4,4 @@ class BaseFormatter {
   }
 }
 
-module.exports = BaseFormatter;
+export default BaseFormatter;

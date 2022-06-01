@@ -1,4 +1,4 @@
-import { formatters } from '../formatters/Formatter';
+import formatters from '../formatters/Formatter';
 
 class VariableProcessor {
   static formatter({ variables, variables_specification }) {
@@ -84,4 +84,4 @@ class VariableProcessor {
   }
 }
 
-module.exports = VariableProcessor;
+export default VariableProcessor;

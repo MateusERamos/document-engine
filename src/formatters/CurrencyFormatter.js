@@ -26,4 +26,4 @@ class CurrencyFormatter extends BaseFormatter {
   }
 }
 
-module.exports = CurrencyFormatter;
+export default CurrencyFormatter;

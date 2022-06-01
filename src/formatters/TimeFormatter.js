@@ -18,4 +18,4 @@ class TimeFormatter extends BaseFormatter {
   }
 }
 
-module.exports = TimeFormatter;
+export default TimeFormatter;

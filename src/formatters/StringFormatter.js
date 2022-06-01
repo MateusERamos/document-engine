@@ -14,4 +14,4 @@ class StringFormatter extends BaseFormatter {
   }
 }
 
-module.exports = StringFormatter;
+export default StringFormatter;

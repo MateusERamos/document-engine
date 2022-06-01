@@ -1,12 +1,12 @@
-import StringFormatter from "./StringFormatter";
-import NumberFormatter from "./NumberFormatter";
-import PercentageFormatter from "./PercentageFormatter";
-import ListFormatter from "./ListFormatter";
-import DateFormatter from "./DateFormatter";
-import TimeFormatter from "./TimeFormatter";
-import CurrencyFormatter from "./CurrencyFormatter";
-import DataBaseFormatter from "./DataBaseFormatter";
-import StructuredFormatter from "./StructuredFormatter";
+import StringFormatter from './StringFormatter';
+import NumberFormatter from './NumberFormatter';
+import PercentageFormatter from './PercentageFormatter';
+import ListFormatter from './ListFormatter';
+import DateFormatter from './DateFormatter';
+import TimeFormatter from './TimeFormatter';
+import CurrencyFormatter from './CurrencyFormatter';
+import DataBaseFormatter from './DataBaseFormatter';
+import StructuredFormatter from './StructuredFormatter';
 
 class Formatter {
   static get formatters() {
@@ -24,4 +24,4 @@ class Formatter {
   }
 }
 
-module.exports = Formatter;
+export default Formatter;

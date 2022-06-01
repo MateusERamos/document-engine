@@ -41,4 +41,4 @@ class DateFormatter extends BaseFormatter {
   }
 }
 
-module.exports = DateFormatter;
+export default DateFormatter;

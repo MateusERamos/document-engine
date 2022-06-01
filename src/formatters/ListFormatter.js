@@ -17,4 +17,4 @@ class ListFormatter extends BaseFormatter {
   }
 }
 
-module.exports = ListFormatter;
+export default ListFormatter;

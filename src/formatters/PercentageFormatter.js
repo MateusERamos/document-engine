@@ -10,4 +10,4 @@ class PercentageFormatter extends BaseFormatter {
   }
 }
 
-module.exports = PercentageFormatter;
+export default PercentageFormatter;
