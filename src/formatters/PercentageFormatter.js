@@ -1,13 +1,14 @@
 import BaseFormatter from './BaseFormatter';
+import extenso from 'extenso';
 
 class PercentageFormatter extends BaseFormatter {
-  static plain({ variable }) {
+  plain({ variable }) {
     return variable.replace('.', ',') + '%';
   }
 
-  static extended({ variable }) {
-    return Utils.number2words(variable) + ' porcento';
+  extended({ variable }) {
+    return extenso(variable) + ' porcento';
   }
 }
 
-export default PercentageFormatter;
+export default new PercentageFormatter();

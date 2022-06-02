@@ -2,7 +2,7 @@ import BaseFormatter from './BaseFormatter';
 import nunjucks from 'nunjucks';
 
 class StructuredFormatter extends BaseFormatter {
-  static text({ variable, specs }) {
+  text({ variable, specs }) {
     const rowsList = [];
     const template = nunjucks.renderString(
       specs.extra_style_params.row_template,
@@ -15,14 +15,16 @@ class StructuredFormatter extends BaseFormatter {
     return rowsList.join(specs.extra_style_params.separator);
   }
 
-  static table({ variable, specs }) {
+  table({ variable, specs }) {
     const tableList = [];
     const tableTitle = specs.extra_style_params.title;
     const lines = specs.extra_style_params.lines;
     let i = 0;
     for (const item in variable) {
-      //TODO tentar entender oq está sendo substituido pelo format
-      const tableRows = `<tr><td><p>${tableTitle.format(i + 1)}</p></td></tr>`;
+      const tableRows = `<tr><td><p>${tableTitle.replace(
+        '/({.*?})/g',
+        i + 1,
+      )}</p></td></tr>`;
       i += 1;
       for (const lineSpec in lines) {
         const columns = [];
@@ -40,14 +42,14 @@ class StructuredFormatter extends BaseFormatter {
     </tbody></table></figure>`;
   }
 
-  static numbering({ variable, specs }) {
+  numbering({ variable, specs }) {
     const result = [];
     if (specs.extra_style_params.row_template != '') {
       const row_template = specs.extra_style_params.row_template;
       template = nunjucks.renderString(row_template);
       for (const index in variable) {
         variable[index]['INDEX'] = index + 1;
-        const filledText = nunjucks.render(template,variable[index]);
+        const filledText = nunjucks.render(template, variable[index]);
         result.append(filledText);
       }
     } else {
@@ -61,4 +63,4 @@ class StructuredFormatter extends BaseFormatter {
   }
 }
 
-export default StructuredFormatter;
+export default new StructuredFormatter();

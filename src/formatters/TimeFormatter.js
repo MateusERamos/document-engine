@@ -1,11 +1,11 @@
 import BaseFormatter from './BaseFormatter';
-import Utils from '../Utils';
+import extenso from 'extenso';
 
 class TimeFormatter extends BaseFormatter {
-  static extended({ variable }) {
+  extended({ variable }) {
     const [stringHora, stringMinutos] = [
-      Utils.number2words(parseInt(variable.substr(0, 2))),
-      Utils.number2words(parseInt(variable.substr(3, 5))),
+      extenso(parseInt(variable.substr(0, 2))),
+      extenso(parseInt(variable.substr(3, 5))),
     ];
     const hora =
       stringHora === 'um' ? stringHora + 'a hora' : stringHora + ' horas';
@@ -18,4 +18,4 @@ class TimeFormatter extends BaseFormatter {
   }
 }
 
-export default TimeFormatter;
+export default new TimeFormatter();

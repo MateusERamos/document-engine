@@ -6,15 +6,11 @@ class DocumentProcessor {
 
   execute(documentTemplate, variableData) {
     const formattedVariables = VariableProcessor.formatter(variableData);
-    console.log(formattedVariables)
-    //processedVariables = { ...processedVariables, ...date };
 
     const documentTxt = nunjucks.renderString(
       documentTemplate,
       formattedVariables,
     );
-
-    console.log(documentTxt)
 
     return documentTxt;
   }

@@ -1,7 +1,7 @@
 import BaseFormatter from './BaseFormatter';
 
 class DateFormatter extends BaseFormatter {
-  static #month = [
+  #month = [
     'Janeiro',
     'Fevereiro',
     'Março',
@@ -16,7 +16,7 @@ class DateFormatter extends BaseFormatter {
     'Dezembro',
   ];
 
-  static plain({ variable, doc_display_style }) {
+  plain({ variable, doc_display_style }) {
     const date = new Date(variable);
     return doc_display_style.includes('%')
       ? doc_display_style
@@ -26,19 +26,19 @@ class DateFormatter extends BaseFormatter {
       : value;
   }
 
-  static extended({ variable }) {
+  extended({ variable }) {
     const date = new Date(variable);
     return `${date.getDate()} de ${
-      DateFormatter.#month[date.getMonth()]
+      this.#month[date.getMonth()]
     } de ${date.getFullYear()}`;
   }
 
-  static date_extended({ variable }) {
+  date_extended({ variable }) {
     const date = new Date(variable);
     return `${date.getDate()} de ${
-      DateFormatter.#month[date.getMonth()]
+      this.#month[date.getMonth()]
     } de ${date.getFullYear()}`;
   }
 }
 
-export default DateFormatter;
+export default new DateFormatter();

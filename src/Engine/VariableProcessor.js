@@ -2,12 +2,14 @@ import Formatter from '../formatters/Formatter';
 const { formatters } = Formatter;
 
 class VariableProcessor {
-  static formatter({ variables, variables_specification }) {
+  constructor() {}
+
+  formatter({ variables, variables_specification }) {
     const formatted = {};
 
     for (const index in variables_specification) {
       const variable = variables[index];
-      formatted[index] = VariableProcessor.#variableFormatter({
+      formatted[index] = this.#variableFormatter({
         specs: variables_specification[index],
         variable,
       });
@@ -16,7 +18,7 @@ class VariableProcessor {
     return formatted;
   }
 
-  static #variableFormatter(variableData) {
+  #variableFormatter(variableData) {
     try {
       const style =
         variableData.specs.doc_display_style &&
@@ -29,10 +31,10 @@ class VariableProcessor {
           : variableData.specs.type;
       return formatters[type][style](variableData);
     } catch (e) {
-      console.log(e.message);
+      console.erro(e);
       return variableData.variable;
     }
   }
 }
 
-export default VariableProcessor;
+export default new VariableProcessor();

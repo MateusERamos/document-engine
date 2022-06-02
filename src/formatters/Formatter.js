@@ -9,7 +9,7 @@ import DataBaseFormatter from './DataBaseFormatter';
 import StructuredFormatter from './StructuredFormatter';
 
 class Formatter {
-  static get formatters() {
+  get formatters() {
     return {
       string: StringFormatter,
       number: NumberFormatter,
@@ -24,4 +24,4 @@ class Formatter {
   }
 }
 
-export default Formatter;
+export default new Formatter();

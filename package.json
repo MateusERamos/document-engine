@@ -23,7 +23,9 @@
     "rimraf": "^3.0.2"
   },
   "dependencies": {
+    "extenso": "^2.0.1",
     "nunjucks": "^3.2.3",
+    "ordinal-pt-br": "^1.0.0",
     "slugify": "^1.6.5"
   },
   "husky": {

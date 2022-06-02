@@ -1,24 +1,23 @@
 import BaseFormatter from './BaseFormatter';
 import slugify from 'slugify';
 class DataBaseFormatter extends BaseFormatter {
-  static plain({ variable, specs }) {
-    const new_variables = {};
+  plain({ variable, specs }) {
+    const newVariables = {};
     response = specs.database_endpoint;
-    let search_result;
+    let searchResult;
 
     for (const item in response) {
       if (response[item][specs.search_key] === parseInt(variable)) {
-        search_result = response[item];
+        searchResult = response[item];
         break;
       }
     }
 
-    for (const key in search_result) {
-      new_variables[slugify(key).upper().replace('-', '_')] =
-        search_result[key];
+    for (const key in searchResult) {
+      newVariables[slugify(key).upper().replace('-', '_')] = searchResult[key];
     }
 
-    return new_variables;
+    return newVariables;
   }
 }
-export default DataBaseFormatter;
+export default new DataBaseFormatter();

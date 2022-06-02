@@ -1,24 +1,24 @@
 import BaseFormatter from './BaseFormatter';
-import Utils from '../Utils';
+import extenso from 'extenso';
 
 class CurrencyFormatter extends BaseFormatter {
-  static extended({ variable }) {
+  extended({ variable }) {
     const value = variable;
     return `${value.toLocaleString('pt-BR', {
       style: 'currency',
       currency: 'BRL',
-    })} (${Utils.number2words(value)})`;
+    })} (${extenso(value, { mode: 'currency', currency: { type: 'BRL' } })})`;
   }
 
-  static date_extended({ variable }) {
+  date_extended({ variable }) {
     const value = variable;
     return `${value.toLocaleString('pt-BR', {
       style: 'currency',
       currency: 'BRL',
-    })} (${Utils.number2words(value)})`;
+    })} (${extenso(value, { mode: 'currency', currency: { type: 'BRL' } })})`;
   }
 
-  static plain({ variable }) {
+  plain({ variable }) {
     return variable.toLocaleString('pt-BR', {
       style: 'currency',
       currency: 'BRL',
@@ -26,4 +26,4 @@ class CurrencyFormatter extends BaseFormatter {
   }
 }
 
-export default CurrencyFormatter;
+export default new CurrencyFormatter();

@@ -1,19 +1,19 @@
 import BaseFormatter from './BaseFormatter';
-import Utils from '../Utils';
+import extenso from 'extenso';
+import 'ordinal-pt-br';
 
 class NumberFormatter extends BaseFormatter {
-  static extended({ variable }) {
-    return `${variable} (${Utils.number2words(variable)})`;
+  extended({ variable }) {
+    return `${variable} (${extenso(variable)})`;
   }
 
-  static percent({ variable }) {
-    return `${variable}% (${Utils.number2words(variable)} por cento)`;
+  percent({ variable }) {
+    return `${variable}% (${extenso(variable)} por cento)`;
   }
 
-  static ordinal({ variable }) {
-    //TO DO
-    return false;
+  ordinal({ variable }) {
+    return variable.toOrdinal();
   }
 }
 
-export default NumberFormatter;
+export default new NumberFormatter();
