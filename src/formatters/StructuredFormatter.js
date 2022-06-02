@@ -1,28 +1,28 @@
 import BaseFormatter from './BaseFormatter';
-import Utils from '../Utils';
+import nunjucks from 'nunjucks';
 
 class StructuredFormatter extends BaseFormatter {
   static text({ variable, specs }) {
-    const rows_list = [];
-    jinja_template = Utils.envNunjucks.from_string(
+    const rowsList = [];
+    const template = nunjucks.renderString(
       specs.extra_style_params.row_template,
     );
     for (const index in variable) {
       variable[index]['INDEX'] = index + 1;
-      filled_text = jinja_template.render(variable[index]);
-      rows_list.append(filled_text);
+      const filledText = nunjucks.render(template, variable[index]);
+      rowsList.append(filledText);
     }
-    return rows_list.join(specs.extra_style_params.separator);
+    return rowsList.join(specs.extra_style_params.separator);
   }
 
   static table({ variable, specs }) {
-    const table_list = [];
-    const table_title = specs.extra_style_params.title;
+    const tableList = [];
+    const tableTitle = specs.extra_style_params.title;
     const lines = specs.extra_style_params.lines;
-    const i = 0;
+    let i = 0;
     for (const item in variable) {
       //TODO tentar entender oq está sendo substituido pelo format
-      table_rows = `<tr><td><p>${table_title.format(i + 1)}</p></td></tr>`;
+      const tableRows = `<tr><td><p>${tableTitle.format(i + 1)}</p></td></tr>`;
       i += 1;
       for (const lineSpec in lines) {
         const columns = [];
@@ -31,33 +31,33 @@ class StructuredFormatter extends BaseFormatter {
             columns.append(`<td>${label}</td><td>${item[info[label]]}</td>`);
           }
         }
-        table_rows.append('<tr>' + columns.join('') + '</tr>');
+        tableRows.append('<tr>' + columns.join('') + '</tr>');
       }
-      table_list.append(table_rows.join(''));
+      tableList.append(tableRows.join(''));
     }
     return `<figure class='table'><table><tbody>
-    ${table_list.join('')}
+    ${tableList.join('')}
     </tbody></table></figure>`;
   }
 
   static numbering({ variable, specs }) {
-    const return_variables = [];
+    const result = [];
     if (specs.extra_style_params.row_template != '') {
       const row_template = specs.extra_style_params.row_template;
-      nunjucks_template = Utils.envNunjucks.from_string(row_template);
+      template = nunjucks.renderString(row_template);
       for (const index in variable) {
         variable[index]['INDEX'] = index + 1;
-        filled_text = nunjucks_template.render(variable[index]);
-        return_variables.append(filled_text);
+        const filledText = nunjucks.render(template,variable[index]);
+        result.append(filledText);
       }
     } else {
       for (const variableIndex in variable) {
-        for (var_key in variableIndex) {
-          return_variables.append(variable[variableIndex][var_key]);
+        for (key in variableIndex) {
+          result.append(variable[variableIndex][key]);
         }
       }
     }
-    return return_variables;
+    return result;
   }
 }
 

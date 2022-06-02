@@ -79,7 +79,7 @@ class VariableProcessor {
       return formatters[type][style](variableData);
     } catch (e) {
       console.log(e);
-      return variableData;
+      return variableData.variable;
     }
   }
 }

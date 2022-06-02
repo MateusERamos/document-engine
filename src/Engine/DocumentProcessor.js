@@ -4,16 +4,19 @@ import nunjucks from 'nunjucks';
 class DocumentProcessor {
   constructor() {}
 
-  execute(documentTemplate, variables) {
-    const formattedVariables = VariableProcessor.formatter(variables);
+  execute(documentTemplate, variableData) {
+    const formattedVariables = VariableProcessor.formatter(variableData);
+    console.log(formattedVariables)
     //processedVariables = { ...processedVariables, ...date };
 
     const documentTxt = nunjucks.renderString(
-      decodeURI(documentTemplate),
+      documentTemplate,
       formattedVariables,
     );
 
-    return encodeURI(documentTxt);
+    console.log(documentTxt)
+
+    return documentTxt;
   }
 }
 
