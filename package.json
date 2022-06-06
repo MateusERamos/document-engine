@@ -6,6 +6,8 @@
   "license": "ISC",
   "source": "src/index.js",
   "main": "dist/main.js",
+  "module": "dist/module.js",
+  "type": "module",
   "targets": {
     "main": {
       "includeNodeModules": [
@@ -19,7 +21,7 @@
   },
   "scripts": {
     "watch": "parcel watch src/index.js",
-    "build": "parcel build src/index.js"
+    "build": "cross-env-shell parcel build src/index.js --out-file $npm_package_name.min.js --no-source-maps --experimental-scope-hoisting"
   },
   "dependencies": {
     "extenso": "^2.0.1",

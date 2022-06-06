@@ -9,7 +9,7 @@ class VariableProcessor {
 
     for (const index in variables_specification) {
       const variable = variables[index];
-      formatted[index] = this.#variableFormatter({
+      formatted[index] = this._variableFormatter({
         specs: variables_specification[index],
         variable,
       });
@@ -18,7 +18,7 @@ class VariableProcessor {
     return formatted;
   }
 
-  #variableFormatter(variableData) {
+  _variableFormatter(variableData) {
     try {
       const style =
         variableData.specs.doc_display_style &&
@@ -31,7 +31,7 @@ class VariableProcessor {
           : variableData.specs.type;
       return formatters[type][style](variableData);
     } catch (e) {
-      console.erro(e);
+      console.log(e);
       return variableData.variable;
     }
   }

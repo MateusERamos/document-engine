@@ -39,7 +39,7 @@ if (parcelRequire == null) {
 
   $parcel$global["parcelRequiref638"] = parcelRequire;
 }
-parcelRequire.register("jlVxi", function(module, exports) {
+parcelRequire.register("2Vtwd", function(module, exports) {
 /*!
  * Extenso.js 2.0.1
  * © 2015-2019 Matheus Alves
@@ -177,15 +177,15 @@ parcelRequire.register("jlVxi", function(module, exports) {
 
 });
 
-class $47d869dffd0ca27e$var$BaseFormatter {
+class $974e0a308d94a63e$var$BaseFormatter {
     plain({ variable: variable  }) {
         return variable;
     }
 }
-var $47d869dffd0ca27e$export$2e2bcd8739ae039 = $47d869dffd0ca27e$var$BaseFormatter;
+var $974e0a308d94a63e$export$2e2bcd8739ae039 = $974e0a308d94a63e$var$BaseFormatter;
 
 
-class $e38a3c6445dd94ae$var$StringFormatter extends (0, $47d869dffd0ca27e$export$2e2bcd8739ae039) {
+class $c2d5c2e0a65d2fad$var$StringFormatter extends (0, $974e0a308d94a63e$export$2e2bcd8739ae039) {
     sentence_case({ variable: variable  }) {
         return variable.charAt(0).toUpperCase() + variable.toLowerCase().slice(1);
     }
@@ -196,13 +196,13 @@ class $e38a3c6445dd94ae$var$StringFormatter extends (0, $47d869dffd0ca27e$export
         return variable.toLowerCase();
     }
 }
-var $e38a3c6445dd94ae$export$2e2bcd8739ae039 = new $e38a3c6445dd94ae$var$StringFormatter();
+var $c2d5c2e0a65d2fad$export$2e2bcd8739ae039 = new $c2d5c2e0a65d2fad$var$StringFormatter();
 
 
 
 
-var $jlVxi = parcelRequire("jlVxi");
-var $c79de0fd5167b1c5$exports = {};
+var $2Vtwd = parcelRequire("2Vtwd");
+var $48a3d1faba1169be$exports = {};
 "use strict";
 /**
  * Retorna o número em sua forma ordinal por extenso
@@ -211,7 +211,7 @@ var $c79de0fd5167b1c5$exports = {};
  * @param {string} [opt.genero=o] Usado para difinir o gênero que será aplicado ao número
  * @param {boolean} [opt.maiuscula=false] Define se a string retornada tera CamelCase (true) ou será toda minúscula (false)
  * @returns {string}
- */ function $c79de0fd5167b1c5$var$toOrdinal(opt) {
+ */ function $48a3d1faba1169be$var$toOrdinal(opt) {
     if (!Number.isInteger(this)) throw new Error("N\xe3o implementado para n\xfameros n\xe3o inteiros.");
     if (this > 999) throw new Error("N\xe3o implementado para n\xfameros maiores que 999.");
     if (this < 1) throw new Error("N\xe3o implementado para n\xfameros negativos.");
@@ -271,40 +271,40 @@ var $c79de0fd5167b1c5$exports = {};
         return w.toUpperCase();
     }) : txt;
 }
-Number.prototype.toOrdinal = $c79de0fd5167b1c5$var$toOrdinal;
-$c79de0fd5167b1c5$exports = Number;
+Number.prototype.toOrdinal = $48a3d1faba1169be$var$toOrdinal;
+$48a3d1faba1169be$exports = Number;
 
 
-class $48a626442e50e49d$var$NumberFormatter extends (0, $47d869dffd0ca27e$export$2e2bcd8739ae039) {
+class $2c3a7a7556e1a144$var$NumberFormatter extends (0, $974e0a308d94a63e$export$2e2bcd8739ae039) {
     extended({ variable: variable  }) {
-        return `${variable} (${(0, (/*@__PURE__*/$parcel$interopDefault($jlVxi)))(variable)})`;
+        return `${variable} (${(0, (/*@__PURE__*/$parcel$interopDefault($2Vtwd)))(variable)})`;
     }
     percent({ variable: variable  }) {
-        return `${variable}% (${(0, (/*@__PURE__*/$parcel$interopDefault($jlVxi)))(variable)} por cento)`;
+        return `${variable}% (${(0, (/*@__PURE__*/$parcel$interopDefault($2Vtwd)))(variable)} por cento)`;
     }
     ordinal({ variable: variable  }) {
         return variable.toOrdinal();
     }
 }
-var $48a626442e50e49d$export$2e2bcd8739ae039 = new $48a626442e50e49d$var$NumberFormatter();
+var $2c3a7a7556e1a144$export$2e2bcd8739ae039 = new $2c3a7a7556e1a144$var$NumberFormatter();
 
 
 
 
-var $jlVxi = parcelRequire("jlVxi");
-class $9caf15966b005918$var$PercentageFormatter extends (0, $47d869dffd0ca27e$export$2e2bcd8739ae039) {
+var $2Vtwd = parcelRequire("2Vtwd");
+class $0f95345365debce7$var$PercentageFormatter extends (0, $974e0a308d94a63e$export$2e2bcd8739ae039) {
     plain({ variable: variable  }) {
         return variable.replace(".", ",") + "%";
     }
     extended({ variable: variable  }) {
-        return (0, (/*@__PURE__*/$parcel$interopDefault($jlVxi)))(variable) + " porcento";
+        return (0, (/*@__PURE__*/$parcel$interopDefault($2Vtwd)))(variable) + " porcento";
     }
 }
-var $9caf15966b005918$export$2e2bcd8739ae039 = new $9caf15966b005918$var$PercentageFormatter();
+var $0f95345365debce7$export$2e2bcd8739ae039 = new $0f95345365debce7$var$PercentageFormatter();
 
 
 
-class $7051732249dbad90$var$ListFormatter extends (0, $47d869dffd0ca27e$export$2e2bcd8739ae039) {
+class $629e9a13e4ec327b$var$ListFormatter extends (0, $974e0a308d94a63e$export$2e2bcd8739ae039) {
     commas({ variable: variable  }) {
         if (variable.length < 2) return variable[0];
         const last_element = variable.pop();
@@ -316,11 +316,11 @@ class $7051732249dbad90$var$ListFormatter extends (0, $47d869dffd0ca27e$export$2
         if (text_type == ".docx") return variable.join("a");
     }
 }
-var $7051732249dbad90$export$2e2bcd8739ae039 = new $7051732249dbad90$var$ListFormatter();
+var $629e9a13e4ec327b$export$2e2bcd8739ae039 = new $629e9a13e4ec327b$var$ListFormatter();
 
 
 
-class $58c837aed263dbc7$var$DateFormatter extends (0, $47d869dffd0ca27e$export$2e2bcd8739ae039) {
+class $11c83cc901071073$var$DateFormatter extends (0, $974e0a308d94a63e$export$2e2bcd8739ae039) {
     #month = [
         "Janeiro",
         "Fevereiro",
@@ -348,17 +348,17 @@ class $58c837aed263dbc7$var$DateFormatter extends (0, $47d869dffd0ca27e$export$2
         return `${date.getDate()} de ${this.#month[date.getMonth()]} de ${date.getFullYear()}`;
     }
 }
-var $58c837aed263dbc7$export$2e2bcd8739ae039 = new $58c837aed263dbc7$var$DateFormatter();
+var $11c83cc901071073$export$2e2bcd8739ae039 = new $11c83cc901071073$var$DateFormatter();
 
 
 
 
-var $jlVxi = parcelRequire("jlVxi");
-class $0f996ddeea27e0e5$var$TimeFormatter extends (0, $47d869dffd0ca27e$export$2e2bcd8739ae039) {
+var $2Vtwd = parcelRequire("2Vtwd");
+class $914b58f611010885$var$TimeFormatter extends (0, $974e0a308d94a63e$export$2e2bcd8739ae039) {
     extended({ variable: variable  }) {
         const [stringHora, stringMinutos] = [
-            (0, (/*@__PURE__*/$parcel$interopDefault($jlVxi)))(parseInt(variable.substr(0, 2))),
-            (0, (/*@__PURE__*/$parcel$interopDefault($jlVxi)))(parseInt(variable.substr(3, 5)))
+            (0, (/*@__PURE__*/$parcel$interopDefault($2Vtwd)))(parseInt(variable.substr(0, 2))),
+            (0, (/*@__PURE__*/$parcel$interopDefault($2Vtwd)))(parseInt(variable.substr(3, 5)))
         ];
         const hora = stringHora === "um" ? stringHora + "a hora" : stringHora + " horas";
         const minuto = stringMinutos === "zero" ? "" : ` e ${stringMinutos} 
@@ -366,19 +366,19 @@ class $0f996ddeea27e0e5$var$TimeFormatter extends (0, $47d869dffd0ca27e$export$2
         return `${hora}${minuto}`;
     }
 }
-var $0f996ddeea27e0e5$export$2e2bcd8739ae039 = new $0f996ddeea27e0e5$var$TimeFormatter();
+var $914b58f611010885$export$2e2bcd8739ae039 = new $914b58f611010885$var$TimeFormatter();
 
 
 
 
-var $jlVxi = parcelRequire("jlVxi");
-class $11676e5b073d26cd$var$CurrencyFormatter extends (0, $47d869dffd0ca27e$export$2e2bcd8739ae039) {
+var $2Vtwd = parcelRequire("2Vtwd");
+class $24abce0a2d203e16$var$CurrencyFormatter extends (0, $974e0a308d94a63e$export$2e2bcd8739ae039) {
     extended({ variable: variable  }) {
         const value = variable;
         return `${value.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL"
-        })} (${(0, (/*@__PURE__*/$parcel$interopDefault($jlVxi)))(value, {
+        })} (${(0, (/*@__PURE__*/$parcel$interopDefault($2Vtwd)))(value, {
             mode: "currency",
             currency: {
                 type: "BRL"
@@ -390,7 +390,7 @@ class $11676e5b073d26cd$var$CurrencyFormatter extends (0, $47d869dffd0ca27e$expo
         return `${value.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL"
-        })} (${(0, (/*@__PURE__*/$parcel$interopDefault($jlVxi)))(value, {
+        })} (${(0, (/*@__PURE__*/$parcel$interopDefault($2Vtwd)))(value, {
             mode: "currency",
             currency: {
                 type: "BRL"
@@ -404,15 +404,15 @@ class $11676e5b073d26cd$var$CurrencyFormatter extends (0, $47d869dffd0ca27e$expo
         });
     }
 }
-var $11676e5b073d26cd$export$2e2bcd8739ae039 = new $11676e5b073d26cd$var$CurrencyFormatter();
+var $24abce0a2d203e16$export$2e2bcd8739ae039 = new $24abce0a2d203e16$var$CurrencyFormatter();
 
 
 
-var $3bab81c54525cb3f$exports = {};
+var $727d0abcf55db728$exports = {};
 (function(name, root, factory) {
-    $3bab81c54525cb3f$exports = factory();
-    $3bab81c54525cb3f$exports["default"] = factory();
-})("slugify", $3bab81c54525cb3f$exports, function() {
+    $727d0abcf55db728$exports = factory();
+    $727d0abcf55db728$exports["default"] = factory();
+})("slugify", $727d0abcf55db728$exports, function() {
     var charMap = JSON.parse('{"$":"dollar","%":"percent","&":"and","<":"less",">":"greater","|":"or","\xa2":"cent","\xa3":"pound","\xa4":"currency","\xa5":"yen","\xa9":"(c)","\xaa":"a","\xae":"(r)","\xba":"o","\xc0":"A","\xc1":"A","\xc2":"A","\xc3":"A","\xc4":"A","\xc5":"A","\xc6":"AE","\xc7":"C","\xc8":"E","\xc9":"E","\xca":"E","\xcb":"E","\xcc":"I","\xcd":"I","\xce":"I","\xcf":"I","\xd0":"D","\xd1":"N","\xd2":"O","\xd3":"O","\xd4":"O","\xd5":"O","\xd6":"O","\xd8":"O","\xd9":"U","\xda":"U","\xdb":"U","\xdc":"U","\xdd":"Y","\xde":"TH","\xdf":"ss","\xe0":"a","\xe1":"a","\xe2":"a","\xe3":"a","\xe4":"a","\xe5":"a","\xe6":"ae","\xe7":"c","\xe8":"e","\xe9":"e","\xea":"e","\xeb":"e","\xec":"i","\xed":"i","\xee":"i","\xef":"i","\xf0":"d","\xf1":"n","\xf2":"o","\xf3":"o","\xf4":"o","\xf5":"o","\xf6":"o","\xf8":"o","\xf9":"u","\xfa":"u","\xfb":"u","\xfc":"u","\xfd":"y","\xfe":"th","\xff":"y","\u0100":"A","\u0101":"a","\u0102":"A","\u0103":"a","\u0104":"A","\u0105":"a","\u0106":"C","\u0107":"c","\u010C":"C","\u010D":"c","\u010E":"D","\u010F":"d","\u0110":"DJ","\u0111":"dj","\u0112":"E","\u0113":"e","\u0116":"E","\u0117":"e","\u0118":"e","\u0119":"e","\u011A":"E","\u011B":"e","\u011E":"G","\u011F":"g","\u0122":"G","\u0123":"g","\u0128":"I","\u0129":"i","\u012A":"i","\u012B":"i","\u012E":"I","\u012F":"i","\u0130":"I","\u0131":"i","\u0136":"k","\u0137":"k","\u013B":"L","\u013C":"l","\u013D":"L","\u013E":"l","\u0141":"L","\u0142":"l","\u0143":"N","\u0144":"n","\u0145":"N","\u0146":"n","\u0147":"N","\u0148":"n","\u014C":"O","\u014D":"o","\u0150":"O","\u0151":"o","\u0152":"OE","\u0153":"oe","\u0154":"R","\u0155":"r","\u0158":"R","\u0159":"r","\u015A":"S","\u015B":"s","\u015E":"S","\u015F":"s","\u0160":"S","\u0161":"s","\u0162":"T","\u0163":"t","\u0164":"T","\u0165":"t","\u0168":"U","\u0169":"u","\u016A":"u","\u016B":"u","\u016E":"U","\u016F":"u","\u0170":"U","\u0171":"u","\u0172":"U","\u0173":"u","\u0174":"W","\u0175":"w","\u0176":"Y","\u0177":"y","\u0178":"Y","\u0179":"Z","\u017A":"z","\u017B":"Z","\u017C":"z","\u017D":"Z","\u017E":"z","\u018F":"E","\u0192":"f","\u01A0":"O","\u01A1":"o","\u01AF":"U","\u01B0":"u","\u01C8":"LJ","\u01C9":"lj","\u01CB":"NJ","\u01CC":"nj","\u0218":"S","\u0219":"s","\u021A":"T","\u021B":"t","\u0259":"e","\u02DA":"o","\u0386":"A","\u0388":"E","\u0389":"H","\u038A":"I","\u038C":"O","\u038E":"Y","\u038F":"W","\u0390":"i","\u0391":"A","\u0392":"B","\u0393":"G","\u0394":"D","\u0395":"E","\u0396":"Z","\u0397":"H","\u0398":"8","\u0399":"I","\u039A":"K","\u039B":"L","\u039C":"M","\u039D":"N","\u039E":"3","\u039F":"O","\u03A0":"P","\u03A1":"R","\u03A3":"S","\u03A4":"T","\u03A5":"Y","\u03A6":"F","\u03A7":"X","\u03A8":"PS","\u03A9":"W","\u03AA":"I","\u03AB":"Y","\u03AC":"a","\u03AD":"e","\u03AE":"h","\u03AF":"i","\u03B0":"y","\u03B1":"a","\u03B2":"b","\u03B3":"g","\u03B4":"d","\u03B5":"e","\u03B6":"z","\u03B7":"h","\u03B8":"8","\u03B9":"i","\u03BA":"k","\u03BB":"l","\u03BC":"m","\u03BD":"n","\u03BE":"3","\u03BF":"o","\u03C0":"p","\u03C1":"r","\u03C2":"s","\u03C3":"s","\u03C4":"t","\u03C5":"y","\u03C6":"f","\u03C7":"x","\u03C8":"ps","\u03C9":"w","\u03CA":"i","\u03CB":"y","\u03CC":"o","\u03CD":"y","\u03CE":"w","\u0401":"Yo","\u0402":"DJ","\u0404":"Ye","\u0406":"I","\u0407":"Yi","\u0408":"J","\u0409":"LJ","\u040A":"NJ","\u040B":"C","\u040F":"DZ","\u0410":"A","\u0411":"B","\u0412":"V","\u0413":"G","\u0414":"D","\u0415":"E","\u0416":"Zh","\u0417":"Z","\u0418":"I","\u0419":"J","\u041A":"K","\u041B":"L","\u041C":"M","\u041D":"N","\u041E":"O","\u041F":"P","\u0420":"R","\u0421":"S","\u0422":"T","\u0423":"U","\u0424":"F","\u0425":"H","\u0426":"C","\u0427":"Ch","\u0428":"Sh","\u0429":"Sh","\u042A":"U","\u042B":"Y","\u042C":"","\u042D":"E","\u042E":"Yu","\u042F":"Ya","\u0430":"a","\u0431":"b","\u0432":"v","\u0433":"g","\u0434":"d","\u0435":"e","\u0436":"zh","\u0437":"z","\u0438":"i","\u0439":"j","\u043A":"k","\u043B":"l","\u043C":"m","\u043D":"n","\u043E":"o","\u043F":"p","\u0440":"r","\u0441":"s","\u0442":"t","\u0443":"u","\u0444":"f","\u0445":"h","\u0446":"c","\u0447":"ch","\u0448":"sh","\u0449":"sh","\u044A":"u","\u044B":"y","\u044C":"","\u044D":"e","\u044E":"yu","\u044F":"ya","\u0451":"yo","\u0452":"dj","\u0454":"ye","\u0456":"i","\u0457":"yi","\u0458":"j","\u0459":"lj","\u045A":"nj","\u045B":"c","\u045D":"u","\u045F":"dz","\u0490":"G","\u0491":"g","\u0492":"GH","\u0493":"gh","\u049A":"KH","\u049B":"kh","\u04A2":"NG","\u04A3":"ng","\u04AE":"UE","\u04AF":"ue","\u04B0":"U","\u04B1":"u","\u04BA":"H","\u04BB":"h","\u04D8":"AE","\u04D9":"ae","\u04E8":"OE","\u04E9":"oe","\u0531":"A","\u0532":"B","\u0533":"G","\u0534":"D","\u0535":"E","\u0536":"Z","\u0537":"E\'","\u0538":"Y\'","\u0539":"T\'","\u053A":"JH","\u053B":"I","\u053C":"L","\u053D":"X","\u053E":"C\'","\u053F":"K","\u0540":"H","\u0541":"D\'","\u0542":"GH","\u0543":"TW","\u0544":"M","\u0545":"Y","\u0546":"N","\u0547":"SH","\u0549":"CH","\u054A":"P","\u054B":"J","\u054C":"R\'","\u054D":"S","\u054E":"V","\u054F":"T","\u0550":"R","\u0551":"C","\u0553":"P\'","\u0554":"Q\'","\u0555":"O\'\'","\u0556":"F","\u0587":"EV","\u0621":"a","\u0622":"aa","\u0623":"a","\u0624":"u","\u0625":"i","\u0626":"e","\u0627":"a","\u0628":"b","\u0629":"h","\u062A":"t","\u062B":"th","\u062C":"j","\u062D":"h","\u062E":"kh","\u062F":"d","\u0630":"th","\u0631":"r","\u0632":"z","\u0633":"s","\u0634":"sh","\u0635":"s","\u0636":"dh","\u0637":"t","\u0638":"z","\u0639":"a","\u063A":"gh","\u0641":"f","\u0642":"q","\u0643":"k","\u0644":"l","\u0645":"m","\u0646":"n","\u0647":"h","\u0648":"w","\u0649":"a","\u064A":"y","\u064B":"an","\u064C":"on","\u064D":"en","\u064E":"a","\u064F":"u","\u0650":"e","\u0652":"","\u0660":"0","\u0661":"1","\u0662":"2","\u0663":"3","\u0664":"4","\u0665":"5","\u0666":"6","\u0667":"7","\u0668":"8","\u0669":"9","\u067E":"p","\u0686":"ch","\u0698":"zh","\u06A9":"k","\u06AF":"g","\u06CC":"y","\u06F0":"0","\u06F1":"1","\u06F2":"2","\u06F3":"3","\u06F4":"4","\u06F5":"5","\u06F6":"6","\u06F7":"7","\u06F8":"8","\u06F9":"9","\u0E3F":"baht","\u10D0":"a","\u10D1":"b","\u10D2":"g","\u10D3":"d","\u10D4":"e","\u10D5":"v","\u10D6":"z","\u10D7":"t","\u10D8":"i","\u10D9":"k","\u10DA":"l","\u10DB":"m","\u10DC":"n","\u10DD":"o","\u10DE":"p","\u10DF":"zh","\u10E0":"r","\u10E1":"s","\u10E2":"t","\u10E3":"u","\u10E4":"f","\u10E5":"k","\u10E6":"gh","\u10E7":"q","\u10E8":"sh","\u10E9":"ch","\u10EA":"ts","\u10EB":"dz","\u10EC":"ts","\u10ED":"ch","\u10EE":"kh","\u10EF":"j","\u10F0":"h","\u1E62":"S","\u1E63":"s","\u1E80":"W","\u1E81":"w","\u1E82":"W","\u1E83":"w","\u1E84":"W","\u1E85":"w","\u1E9E":"SS","\u1EA0":"A","\u1EA1":"a","\u1EA2":"A","\u1EA3":"a","\u1EA4":"A","\u1EA5":"a","\u1EA6":"A","\u1EA7":"a","\u1EA8":"A","\u1EA9":"a","\u1EAA":"A","\u1EAB":"a","\u1EAC":"A","\u1EAD":"a","\u1EAE":"A","\u1EAF":"a","\u1EB0":"A","\u1EB1":"a","\u1EB2":"A","\u1EB3":"a","\u1EB4":"A","\u1EB5":"a","\u1EB6":"A","\u1EB7":"a","\u1EB8":"E","\u1EB9":"e","\u1EBA":"E","\u1EBB":"e","\u1EBC":"E","\u1EBD":"e","\u1EBE":"E","\u1EBF":"e","\u1EC0":"E","\u1EC1":"e","\u1EC2":"E","\u1EC3":"e","\u1EC4":"E","\u1EC5":"e","\u1EC6":"E","\u1EC7":"e","\u1EC8":"I","\u1EC9":"i","\u1ECA":"I","\u1ECB":"i","\u1ECC":"O","\u1ECD":"o","\u1ECE":"O","\u1ECF":"o","\u1ED0":"O","\u1ED1":"o","\u1ED2":"O","\u1ED3":"o","\u1ED4":"O","\u1ED5":"o","\u1ED6":"O","\u1ED7":"o","\u1ED8":"O","\u1ED9":"o","\u1EDA":"O","\u1EDB":"o","\u1EDC":"O","\u1EDD":"o","\u1EDE":"O","\u1EDF":"o","\u1EE0":"O","\u1EE1":"o","\u1EE2":"O","\u1EE3":"o","\u1EE4":"U","\u1EE5":"u","\u1EE6":"U","\u1EE7":"u","\u1EE8":"U","\u1EE9":"u","\u1EEA":"U","\u1EEB":"u","\u1EEC":"U","\u1EED":"u","\u1EEE":"U","\u1EEF":"u","\u1EF0":"U","\u1EF1":"u","\u1EF2":"Y","\u1EF3":"y","\u1EF4":"Y","\u1EF5":"y","\u1EF6":"Y","\u1EF7":"y","\u1EF8":"Y","\u1EF9":"y","\u2013":"-","\u2018":"\'","\u2019":"\'","\u201C":"\\"","\u201D":"\\"","\u201E":"\\"","\u2020":"+","\u2022":"*","\u2026":"...","\u20A0":"ecu","\u20A2":"cruzeiro","\u20A3":"french franc","\u20A4":"lira","\u20A5":"mill","\u20A6":"naira","\u20A7":"peseta","\u20A8":"rupee","\u20A9":"won","\u20AA":"new shequel","\u20AB":"dong","\u20AC":"euro","\u20AD":"kip","\u20AE":"tugrik","\u20AF":"drachma","\u20B0":"penny","\u20B1":"peso","\u20B2":"guarani","\u20B3":"austral","\u20B4":"hryvnia","\u20B5":"cedi","\u20B8":"kazakhstani tenge","\u20B9":"indian rupee","\u20BA":"turkish lira","\u20BD":"russian ruble","\u20BF":"bitcoin","\u2120":"sm","\u2122":"tm","\u2202":"d","\u2206":"delta","\u2211":"sum","\u221E":"infinity","\u2665":"love","\u5143":"yuan","\u5186":"yen","\uFDFC":"rial","\uFEF5":"laa","\uFEF7":"laa","\uFEF9":"lai","\uFEFB":"la"}');
     var locales = JSON.parse('{"bg":{"\u0419":"Y","\u0426":"Ts","\u0429":"Sht","\u042A":"A","\u042C":"Y","\u0439":"y","\u0446":"ts","\u0449":"sht","\u044A":"a","\u044C":"y"},"de":{"\xc4":"AE","\xe4":"ae","\xd6":"OE","\xf6":"oe","\xdc":"UE","\xfc":"ue","\xdf":"ss","%":"prozent","&":"und","|":"oder","\u2211":"summe","\u221E":"unendlich","\u2665":"liebe"},"es":{"%":"por ciento","&":"y","<":"menor que",">":"mayor que","|":"o","\xa2":"centavos","\xa3":"libras","\xa4":"moneda","\u20A3":"francos","\u2211":"suma","\u221E":"infinito","\u2665":"amor"},"fr":{"%":"pourcent","&":"et","<":"plus petit",">":"plus grand","|":"ou","\xa2":"centime","\xa3":"livre","\xa4":"devise","\u20A3":"franc","\u2211":"somme","\u221E":"infini","\u2665":"amour"},"pt":{"%":"porcento","&":"e","<":"menor",">":"maior","|":"ou","\xa2":"centavo","\u2211":"soma","\xa3":"libra","\u221E":"infinito","\u2665":"amor"},"uk":{"\u0418":"Y","\u0438":"y","\u0419":"Y","\u0439":"y","\u0426":"Ts","\u0446":"ts","\u0425":"Kh","\u0445":"kh","\u0429":"Shch","\u0449":"shch","\u0413":"H","\u0433":"h"},"vi":{"\u0110":"D","\u0111":"d"},"da":{"\xd8":"OE","\xf8":"oe","\xc5":"AA","\xe5":"aa","%":"procent","&":"og","|":"eller","$":"dollar","<":"mindre end",">":"st\xf8rre end"},"nb":{"&":"og","\xc5":"AA","\xc6":"AE","\xd8":"OE","\xe5":"aa","\xe6":"ae","\xf8":"oe"},"it":{"&":"e"},"nl":{"&":"en"},"sv":{"&":"och","\xc5":"AA","\xc4":"AE","\xd6":"OE","\xe5":"aa","\xe4":"ae","\xf6":"oe"}}');
     function replace(string, options) {
@@ -445,7 +445,7 @@ var $3bab81c54525cb3f$exports = {};
 });
 
 
-class $fda8cdb79700da20$var$DataBaseFormatter extends (0, $47d869dffd0ca27e$export$2e2bcd8739ae039) {
+class $6ca32986363d6142$var$DataBaseFormatter extends (0, $974e0a308d94a63e$export$2e2bcd8739ae039) {
     plain({ variable: variable , specs: specs  }) {
         const newVariables = {};
         response = specs.database_endpoint;
@@ -454,164 +454,164 @@ class $fda8cdb79700da20$var$DataBaseFormatter extends (0, $47d869dffd0ca27e$expo
             searchResult = response[item];
             break;
         }
-        for(const key in searchResult)newVariables[(0, (/*@__PURE__*/$parcel$interopDefault($3bab81c54525cb3f$exports)))(key).upper().replace("-", "_")] = searchResult[key];
+        for(const key in searchResult)newVariables[(0, (/*@__PURE__*/$parcel$interopDefault($727d0abcf55db728$exports)))(key).upper().replace("-", "_")] = searchResult[key];
         return newVariables;
     }
 }
-var $fda8cdb79700da20$export$2e2bcd8739ae039 = new $fda8cdb79700da20$var$DataBaseFormatter();
+var $6ca32986363d6142$export$2e2bcd8739ae039 = new $6ca32986363d6142$var$DataBaseFormatter();
 
 
 
-var $9de30c1aa84a0e7a$exports = {};
-var $8180967fb1b46221$exports = {};
+var $96f6f5100f14b9d1$exports = {};
+var $0a5d5772423f1efb$exports = {};
 // shim for using process in browser
-var $8180967fb1b46221$var$process = $8180967fb1b46221$exports = {};
+var $0a5d5772423f1efb$var$process = $0a5d5772423f1efb$exports = {};
 // cached from whatever global is present so that test runners that stub it
 // don't break things.  But we need to wrap it in a try catch in case it is
 // wrapped in strict mode code which doesn't define any globals.  It's inside a
 // function because try/catches deoptimize in certain engines.
-var $8180967fb1b46221$var$cachedSetTimeout;
-var $8180967fb1b46221$var$cachedClearTimeout;
-function $8180967fb1b46221$var$defaultSetTimout() {
+var $0a5d5772423f1efb$var$cachedSetTimeout;
+var $0a5d5772423f1efb$var$cachedClearTimeout;
+function $0a5d5772423f1efb$var$defaultSetTimout() {
     throw new Error("setTimeout has not been defined");
 }
-function $8180967fb1b46221$var$defaultClearTimeout() {
+function $0a5d5772423f1efb$var$defaultClearTimeout() {
     throw new Error("clearTimeout has not been defined");
 }
 (function() {
     try {
-        if (typeof setTimeout === "function") $8180967fb1b46221$var$cachedSetTimeout = setTimeout;
-        else $8180967fb1b46221$var$cachedSetTimeout = $8180967fb1b46221$var$defaultSetTimout;
+        if (typeof setTimeout === "function") $0a5d5772423f1efb$var$cachedSetTimeout = setTimeout;
+        else $0a5d5772423f1efb$var$cachedSetTimeout = $0a5d5772423f1efb$var$defaultSetTimout;
     } catch (e) {
-        $8180967fb1b46221$var$cachedSetTimeout = $8180967fb1b46221$var$defaultSetTimout;
+        $0a5d5772423f1efb$var$cachedSetTimeout = $0a5d5772423f1efb$var$defaultSetTimout;
     }
     try {
-        if (typeof clearTimeout === "function") $8180967fb1b46221$var$cachedClearTimeout = clearTimeout;
-        else $8180967fb1b46221$var$cachedClearTimeout = $8180967fb1b46221$var$defaultClearTimeout;
+        if (typeof clearTimeout === "function") $0a5d5772423f1efb$var$cachedClearTimeout = clearTimeout;
+        else $0a5d5772423f1efb$var$cachedClearTimeout = $0a5d5772423f1efb$var$defaultClearTimeout;
     } catch (e1) {
-        $8180967fb1b46221$var$cachedClearTimeout = $8180967fb1b46221$var$defaultClearTimeout;
+        $0a5d5772423f1efb$var$cachedClearTimeout = $0a5d5772423f1efb$var$defaultClearTimeout;
     }
 })();
-function $8180967fb1b46221$var$runTimeout(fun) {
-    if ($8180967fb1b46221$var$cachedSetTimeout === setTimeout) //normal enviroments in sane situations
+function $0a5d5772423f1efb$var$runTimeout(fun) {
+    if ($0a5d5772423f1efb$var$cachedSetTimeout === setTimeout) //normal enviroments in sane situations
     return setTimeout(fun, 0);
     // if setTimeout wasn't available but was latter defined
-    if (($8180967fb1b46221$var$cachedSetTimeout === $8180967fb1b46221$var$defaultSetTimout || !$8180967fb1b46221$var$cachedSetTimeout) && setTimeout) {
-        $8180967fb1b46221$var$cachedSetTimeout = setTimeout;
+    if (($0a5d5772423f1efb$var$cachedSetTimeout === $0a5d5772423f1efb$var$defaultSetTimout || !$0a5d5772423f1efb$var$cachedSetTimeout) && setTimeout) {
+        $0a5d5772423f1efb$var$cachedSetTimeout = setTimeout;
         return setTimeout(fun, 0);
     }
     try {
         // when when somebody has screwed with setTimeout but no I.E. maddness
-        return $8180967fb1b46221$var$cachedSetTimeout(fun, 0);
+        return $0a5d5772423f1efb$var$cachedSetTimeout(fun, 0);
     } catch (e) {
         try {
             // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return $8180967fb1b46221$var$cachedSetTimeout.call(null, fun, 0);
+            return $0a5d5772423f1efb$var$cachedSetTimeout.call(null, fun, 0);
         } catch (e) {
             // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return $8180967fb1b46221$var$cachedSetTimeout.call(this, fun, 0);
+            return $0a5d5772423f1efb$var$cachedSetTimeout.call(this, fun, 0);
         }
     }
 }
-function $8180967fb1b46221$var$runClearTimeout(marker) {
-    if ($8180967fb1b46221$var$cachedClearTimeout === clearTimeout) //normal enviroments in sane situations
+function $0a5d5772423f1efb$var$runClearTimeout(marker) {
+    if ($0a5d5772423f1efb$var$cachedClearTimeout === clearTimeout) //normal enviroments in sane situations
     return clearTimeout(marker);
     // if clearTimeout wasn't available but was latter defined
-    if (($8180967fb1b46221$var$cachedClearTimeout === $8180967fb1b46221$var$defaultClearTimeout || !$8180967fb1b46221$var$cachedClearTimeout) && clearTimeout) {
-        $8180967fb1b46221$var$cachedClearTimeout = clearTimeout;
+    if (($0a5d5772423f1efb$var$cachedClearTimeout === $0a5d5772423f1efb$var$defaultClearTimeout || !$0a5d5772423f1efb$var$cachedClearTimeout) && clearTimeout) {
+        $0a5d5772423f1efb$var$cachedClearTimeout = clearTimeout;
         return clearTimeout(marker);
     }
     try {
         // when when somebody has screwed with setTimeout but no I.E. maddness
-        return $8180967fb1b46221$var$cachedClearTimeout(marker);
+        return $0a5d5772423f1efb$var$cachedClearTimeout(marker);
     } catch (e) {
         try {
             // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return $8180967fb1b46221$var$cachedClearTimeout.call(null, marker);
+            return $0a5d5772423f1efb$var$cachedClearTimeout.call(null, marker);
         } catch (e) {
             // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
             // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return $8180967fb1b46221$var$cachedClearTimeout.call(this, marker);
+            return $0a5d5772423f1efb$var$cachedClearTimeout.call(this, marker);
         }
     }
 }
-var $8180967fb1b46221$var$queue = [];
-var $8180967fb1b46221$var$draining = false;
-var $8180967fb1b46221$var$currentQueue;
-var $8180967fb1b46221$var$queueIndex = -1;
-function $8180967fb1b46221$var$cleanUpNextTick() {
-    if (!$8180967fb1b46221$var$draining || !$8180967fb1b46221$var$currentQueue) return;
-    $8180967fb1b46221$var$draining = false;
-    if ($8180967fb1b46221$var$currentQueue.length) $8180967fb1b46221$var$queue = $8180967fb1b46221$var$currentQueue.concat($8180967fb1b46221$var$queue);
-    else $8180967fb1b46221$var$queueIndex = -1;
-    if ($8180967fb1b46221$var$queue.length) $8180967fb1b46221$var$drainQueue();
+var $0a5d5772423f1efb$var$queue = [];
+var $0a5d5772423f1efb$var$draining = false;
+var $0a5d5772423f1efb$var$currentQueue;
+var $0a5d5772423f1efb$var$queueIndex = -1;
+function $0a5d5772423f1efb$var$cleanUpNextTick() {
+    if (!$0a5d5772423f1efb$var$draining || !$0a5d5772423f1efb$var$currentQueue) return;
+    $0a5d5772423f1efb$var$draining = false;
+    if ($0a5d5772423f1efb$var$currentQueue.length) $0a5d5772423f1efb$var$queue = $0a5d5772423f1efb$var$currentQueue.concat($0a5d5772423f1efb$var$queue);
+    else $0a5d5772423f1efb$var$queueIndex = -1;
+    if ($0a5d5772423f1efb$var$queue.length) $0a5d5772423f1efb$var$drainQueue();
 }
-function $8180967fb1b46221$var$drainQueue() {
-    if ($8180967fb1b46221$var$draining) return;
-    var timeout = $8180967fb1b46221$var$runTimeout($8180967fb1b46221$var$cleanUpNextTick);
-    $8180967fb1b46221$var$draining = true;
-    var len = $8180967fb1b46221$var$queue.length;
+function $0a5d5772423f1efb$var$drainQueue() {
+    if ($0a5d5772423f1efb$var$draining) return;
+    var timeout = $0a5d5772423f1efb$var$runTimeout($0a5d5772423f1efb$var$cleanUpNextTick);
+    $0a5d5772423f1efb$var$draining = true;
+    var len = $0a5d5772423f1efb$var$queue.length;
     while(len){
-        $8180967fb1b46221$var$currentQueue = $8180967fb1b46221$var$queue;
-        $8180967fb1b46221$var$queue = [];
-        while(++$8180967fb1b46221$var$queueIndex < len)if ($8180967fb1b46221$var$currentQueue) $8180967fb1b46221$var$currentQueue[$8180967fb1b46221$var$queueIndex].run();
-        $8180967fb1b46221$var$queueIndex = -1;
-        len = $8180967fb1b46221$var$queue.length;
+        $0a5d5772423f1efb$var$currentQueue = $0a5d5772423f1efb$var$queue;
+        $0a5d5772423f1efb$var$queue = [];
+        while(++$0a5d5772423f1efb$var$queueIndex < len)if ($0a5d5772423f1efb$var$currentQueue) $0a5d5772423f1efb$var$currentQueue[$0a5d5772423f1efb$var$queueIndex].run();
+        $0a5d5772423f1efb$var$queueIndex = -1;
+        len = $0a5d5772423f1efb$var$queue.length;
     }
-    $8180967fb1b46221$var$currentQueue = null;
-    $8180967fb1b46221$var$draining = false;
-    $8180967fb1b46221$var$runClearTimeout(timeout);
+    $0a5d5772423f1efb$var$currentQueue = null;
+    $0a5d5772423f1efb$var$draining = false;
+    $0a5d5772423f1efb$var$runClearTimeout(timeout);
 }
-$8180967fb1b46221$var$process.nextTick = function(fun) {
+$0a5d5772423f1efb$var$process.nextTick = function(fun) {
     var args = new Array(arguments.length - 1);
     if (arguments.length > 1) for(var i = 1; i < arguments.length; i++)args[i - 1] = arguments[i];
-    $8180967fb1b46221$var$queue.push(new $8180967fb1b46221$var$Item(fun, args));
-    if ($8180967fb1b46221$var$queue.length === 1 && !$8180967fb1b46221$var$draining) $8180967fb1b46221$var$runTimeout($8180967fb1b46221$var$drainQueue);
+    $0a5d5772423f1efb$var$queue.push(new $0a5d5772423f1efb$var$Item(fun, args));
+    if ($0a5d5772423f1efb$var$queue.length === 1 && !$0a5d5772423f1efb$var$draining) $0a5d5772423f1efb$var$runTimeout($0a5d5772423f1efb$var$drainQueue);
 };
 // v8 likes predictible objects
-function $8180967fb1b46221$var$Item(fun, array) {
+function $0a5d5772423f1efb$var$Item(fun, array) {
     this.fun = fun;
     this.array = array;
 }
-$8180967fb1b46221$var$Item.prototype.run = function() {
+$0a5d5772423f1efb$var$Item.prototype.run = function() {
     this.fun.apply(null, this.array);
 };
-$8180967fb1b46221$var$process.title = "browser";
-$8180967fb1b46221$var$process.browser = true;
-$8180967fb1b46221$var$process.env = {};
-$8180967fb1b46221$var$process.argv = [];
-$8180967fb1b46221$var$process.version = ""; // empty string to avoid regexp issues
-$8180967fb1b46221$var$process.versions = {};
-function $8180967fb1b46221$var$noop() {}
-$8180967fb1b46221$var$process.on = $8180967fb1b46221$var$noop;
-$8180967fb1b46221$var$process.addListener = $8180967fb1b46221$var$noop;
-$8180967fb1b46221$var$process.once = $8180967fb1b46221$var$noop;
-$8180967fb1b46221$var$process.off = $8180967fb1b46221$var$noop;
-$8180967fb1b46221$var$process.removeListener = $8180967fb1b46221$var$noop;
-$8180967fb1b46221$var$process.removeAllListeners = $8180967fb1b46221$var$noop;
-$8180967fb1b46221$var$process.emit = $8180967fb1b46221$var$noop;
-$8180967fb1b46221$var$process.prependListener = $8180967fb1b46221$var$noop;
-$8180967fb1b46221$var$process.prependOnceListener = $8180967fb1b46221$var$noop;
-$8180967fb1b46221$var$process.listeners = function(name) {
+$0a5d5772423f1efb$var$process.title = "browser";
+$0a5d5772423f1efb$var$process.browser = true;
+$0a5d5772423f1efb$var$process.env = {};
+$0a5d5772423f1efb$var$process.argv = [];
+$0a5d5772423f1efb$var$process.version = ""; // empty string to avoid regexp issues
+$0a5d5772423f1efb$var$process.versions = {};
+function $0a5d5772423f1efb$var$noop() {}
+$0a5d5772423f1efb$var$process.on = $0a5d5772423f1efb$var$noop;
+$0a5d5772423f1efb$var$process.addListener = $0a5d5772423f1efb$var$noop;
+$0a5d5772423f1efb$var$process.once = $0a5d5772423f1efb$var$noop;
+$0a5d5772423f1efb$var$process.off = $0a5d5772423f1efb$var$noop;
+$0a5d5772423f1efb$var$process.removeListener = $0a5d5772423f1efb$var$noop;
+$0a5d5772423f1efb$var$process.removeAllListeners = $0a5d5772423f1efb$var$noop;
+$0a5d5772423f1efb$var$process.emit = $0a5d5772423f1efb$var$noop;
+$0a5d5772423f1efb$var$process.prependListener = $0a5d5772423f1efb$var$noop;
+$0a5d5772423f1efb$var$process.prependOnceListener = $0a5d5772423f1efb$var$noop;
+$0a5d5772423f1efb$var$process.listeners = function(name) {
     return [];
 };
-$8180967fb1b46221$var$process.binding = function(name) {
+$0a5d5772423f1efb$var$process.binding = function(name) {
     throw new Error("process.binding is not supported");
 };
-$8180967fb1b46221$var$process.cwd = function() {
+$0a5d5772423f1efb$var$process.cwd = function() {
     return "/";
 };
-$8180967fb1b46221$var$process.chdir = function(dir) {
+$0a5d5772423f1efb$var$process.chdir = function(dir) {
     throw new Error("process.chdir is not supported");
 };
-$8180967fb1b46221$var$process.umask = function() {
+$0a5d5772423f1efb$var$process.umask = function() {
     return 0;
 };
 
 
 /*! Browser bundle of nunjucks 3.2.3  */ (function webpackUniversalModuleDefinition(root, factory) {
-    $9de30c1aa84a0e7a$exports = factory();
-})(typeof self !== "undefined" ? self : $9de30c1aa84a0e7a$exports, function() {
+    $96f6f5100f14b9d1$exports = factory();
+})(typeof self !== "undefined" ? self : $96f6f5100f14b9d1$exports, function() {
     return /******/ function(modules) {
         /******/ // The module cache
         /******/ var installedModules = {};
@@ -1643,9 +1643,9 @@ $8180967fb1b46221$var$process.umask = function() {
             function print(str, indent, inline) {
                 var lines = str.split("\n");
                 lines.forEach(function(line, i) {
-                    if (line && (inline && i > 0 || !inline)) $8180967fb1b46221$exports.stdout.write(" ".repeat(indent));
+                    if (line && (inline && i > 0 || !inline)) $0a5d5772423f1efb$exports.stdout.write(" ".repeat(indent));
                     var nl = i === lines.length - 1 ? "" : "\n";
-                    $8180967fb1b46221$exports.stdout.write("" + line + nl);
+                    $0a5d5772423f1efb$exports.stdout.write("" + line + nl);
                 });
             } // Print the AST in a nicely formatted tree format for debuggin
             function printNodes(node, indent) {
@@ -4802,7 +4802,7 @@ $8180967fb1b46221$var$process.umask = function() {
                 };
                 var executeAsync = function(fn) {
                     if (typeof setImmediate === "function") setImmediate(fn);
-                    else if (typeof $8180967fb1b46221$exports !== "undefined" && $8180967fb1b46221$exports.nextTick) $8180967fb1b46221$exports.nextTick(fn);
+                    else if (typeof $0a5d5772423f1efb$exports !== "undefined" && $0a5d5772423f1efb$exports.nextTick) $0a5d5772423f1efb$exports.nextTick(fn);
                     else setTimeout(fn, 0);
                 };
                 var makeIterator = function(tasks) {
@@ -6409,13 +6409,13 @@ $8180967fb1b46221$var$process.umask = function() {
 });
 
 
-class $ce99626dd5470f9a$var$StructuredFormatter extends (0, $47d869dffd0ca27e$export$2e2bcd8739ae039) {
+class $b4685c82c15ee53d$var$StructuredFormatter extends (0, $974e0a308d94a63e$export$2e2bcd8739ae039) {
     text({ variable: variable , specs: specs  }) {
         const rowsList = [];
-        const template = (0, (/*@__PURE__*/$parcel$interopDefault($9de30c1aa84a0e7a$exports))).renderString(specs.extra_style_params.row_template);
+        const template = (0, (/*@__PURE__*/$parcel$interopDefault($96f6f5100f14b9d1$exports))).renderString(specs.extra_style_params.row_template);
         for(const index in variable){
             variable[index]["INDEX"] = index + 1;
-            const filledText = (0, (/*@__PURE__*/$parcel$interopDefault($9de30c1aa84a0e7a$exports))).render(template, variable[index]);
+            const filledText = (0, (/*@__PURE__*/$parcel$interopDefault($96f6f5100f14b9d1$exports))).render(template, variable[index]);
             rowsList.append(filledText);
         }
         return rowsList.join(specs.extra_style_params.separator);
@@ -6443,81 +6443,81 @@ class $ce99626dd5470f9a$var$StructuredFormatter extends (0, $47d869dffd0ca27e$ex
         const result = [];
         if (specs.extra_style_params.row_template != "") {
             const row_template = specs.extra_style_params.row_template;
-            template = (0, (/*@__PURE__*/$parcel$interopDefault($9de30c1aa84a0e7a$exports))).renderString(row_template);
+            template = (0, (/*@__PURE__*/$parcel$interopDefault($96f6f5100f14b9d1$exports))).renderString(row_template);
             for(const index in variable){
                 variable[index]["INDEX"] = index + 1;
-                const filledText = (0, (/*@__PURE__*/$parcel$interopDefault($9de30c1aa84a0e7a$exports))).render(template, variable[index]);
+                const filledText = (0, (/*@__PURE__*/$parcel$interopDefault($96f6f5100f14b9d1$exports))).render(template, variable[index]);
                 result.append(filledText);
             }
         } else {
-            for(const variableIndex in variable)for(key in variableIndex)result.append(variable[variableIndex][key]);
+            for(const variableIndex in variable)for(const key in variableIndex)result.append(variable[variableIndex][key]);
         }
         return result;
     }
 }
-var $ce99626dd5470f9a$export$2e2bcd8739ae039 = new $ce99626dd5470f9a$var$StructuredFormatter();
+var $b4685c82c15ee53d$export$2e2bcd8739ae039 = new $b4685c82c15ee53d$var$StructuredFormatter();
 
 
-class $a6129bcc822ec2b0$var$Formatter {
+class $9a02e969fd2bc204$var$Formatter {
     get formatters() {
         return {
-            string: (0, $e38a3c6445dd94ae$export$2e2bcd8739ae039),
-            number: (0, $48a626442e50e49d$export$2e2bcd8739ae039),
-            percentage: (0, $9caf15966b005918$export$2e2bcd8739ae039),
-            list: (0, $7051732249dbad90$export$2e2bcd8739ae039),
-            date: (0, $58c837aed263dbc7$export$2e2bcd8739ae039),
-            time: (0, $0f996ddeea27e0e5$export$2e2bcd8739ae039),
-            currency: (0, $11676e5b073d26cd$export$2e2bcd8739ae039),
-            database: (0, $fda8cdb79700da20$export$2e2bcd8739ae039),
-            structured: (0, $ce99626dd5470f9a$export$2e2bcd8739ae039)
+            string: (0, $c2d5c2e0a65d2fad$export$2e2bcd8739ae039),
+            number: (0, $2c3a7a7556e1a144$export$2e2bcd8739ae039),
+            percentage: (0, $0f95345365debce7$export$2e2bcd8739ae039),
+            list: (0, $629e9a13e4ec327b$export$2e2bcd8739ae039),
+            date: (0, $11c83cc901071073$export$2e2bcd8739ae039),
+            time: (0, $914b58f611010885$export$2e2bcd8739ae039),
+            currency: (0, $24abce0a2d203e16$export$2e2bcd8739ae039),
+            database: (0, $6ca32986363d6142$export$2e2bcd8739ae039),
+            structured: (0, $b4685c82c15ee53d$export$2e2bcd8739ae039)
         };
     }
 }
-var $a6129bcc822ec2b0$export$2e2bcd8739ae039 = new $a6129bcc822ec2b0$var$Formatter();
+var $9a02e969fd2bc204$export$2e2bcd8739ae039 = new $9a02e969fd2bc204$var$Formatter();
 
 
-const { formatters: $58e9896119f1c5ca$var$formatters  } = (0, $a6129bcc822ec2b0$export$2e2bcd8739ae039);
-class $58e9896119f1c5ca$var$VariableProcessor {
+const { formatters: $da20d8cc8f38c47b$var$formatters  } = (0, $9a02e969fd2bc204$export$2e2bcd8739ae039);
+class $da20d8cc8f38c47b$var$VariableProcessor {
     constructor(){}
     formatter({ variables: variables , variables_specification: variables_specification  }) {
         const formatted = {};
         for(const index in variables_specification){
             const variable = variables[index];
-            formatted[index] = this.#variableFormatter({
+            formatted[index] = this._variableFormatter({
                 specs: variables_specification[index],
                 variable: variable
             });
         }
         return formatted;
     }
-     #variableFormatter(variableData) {
+    _variableFormatter(variableData) {
         try {
             const style = variableData.specs.doc_display_style && !variableData.specs.doc_display_style.includes("%") ? variableData.specs.doc_display_style : "plain";
             const type = variableData.specs.type.substr(0, 11) === "structured_" ? "structured" : variableData.specs.type;
-            return $58e9896119f1c5ca$var$formatters[type][style](variableData);
+            return $da20d8cc8f38c47b$var$formatters[type][style](variableData);
         } catch (e) {
-            console.erro(e);
+            console.log(e);
             return variableData.variable;
         }
     }
 }
-var $58e9896119f1c5ca$export$2e2bcd8739ae039 = new $58e9896119f1c5ca$var$VariableProcessor();
+var $da20d8cc8f38c47b$export$2e2bcd8739ae039 = new $da20d8cc8f38c47b$var$VariableProcessor();
 
 
 
-class $532f14a9c65495e8$var$DocumentProcessor {
+class $1db82b503d9a4fa4$var$DocumentProcessor {
     constructor(){}
     execute(documentTemplate, variableData) {
-        const formattedVariables = (0, $58e9896119f1c5ca$export$2e2bcd8739ae039).formatter(variableData);
-        const documentTxt = (0, (/*@__PURE__*/$parcel$interopDefault($9de30c1aa84a0e7a$exports))).renderString(documentTemplate, formattedVariables);
+        const formattedVariables = (0, $da20d8cc8f38c47b$export$2e2bcd8739ae039).formatter(variableData);
+        const documentTxt = (0, (/*@__PURE__*/$parcel$interopDefault($96f6f5100f14b9d1$exports))).renderString(documentTemplate, formattedVariables);
         return documentTxt;
     }
 }
-var $532f14a9c65495e8$export$2e2bcd8739ae039 = new $532f14a9c65495e8$var$DocumentProcessor();
+var $1db82b503d9a4fa4$export$2e2bcd8739ae039 = new $1db82b503d9a4fa4$var$DocumentProcessor();
 
 
 "use strict";
-window.documentProcessor = (0, $532f14a9c65495e8$export$2e2bcd8739ae039);
+window.documentProcessor = (0, $1db82b503d9a4fa4$export$2e2bcd8739ae039);
 
 
 //# sourceMappingURL=main.js.map

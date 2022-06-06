@@ -54,7 +54,7 @@ class StructuredFormatter extends BaseFormatter {
       }
     } else {
       for (const variableIndex in variable) {
-        for (key in variableIndex) {
+        for (const key in variableIndex) {
           result.append(variable[variableIndex][key]);
         }
       }
